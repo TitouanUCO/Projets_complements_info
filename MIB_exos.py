@@ -12,3 +12,4 @@ allee2={ (alien.Nom) for alien in BaseAliens for cabine in BaseCabines if alien.
 cabine_pair={alien.Planete for alien in BaseAliens for cabine in BaseCabines if int(alien.NoCabine)%2 == 0}
 agent_Terminus={alien.Nom for alien in BaseAliens for cabine in BaseCabines for gardien in BaseGardiens for agent in BaseAgents if alien.NoCabine==gardien.NoCabine and gardien.Nom==agent.Nom and agent.Ville=='Terminus'}
 gardien_feminins_bortsch={gardien.Nom for gardien in BaseGardiens for alien in BaseAliens for miam in BaseMiams if alien.NoCabine==gardien.NoCabine and alien.Sexe=='F' and alien.Nom==miam.NomAlien and miam.Aliment=='Bortsch'}
+Terminus_ou_filles={cabine.NoCabine for gardien in BaseGardiens for alien in BaseAlien
