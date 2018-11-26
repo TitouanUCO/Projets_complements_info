@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 25 10:47:42 2018
+
+@author: titou
+"""
+
 class Responsable:
         def __init__(self, NoAllee, Nom):
                 self.NoAllee = NoAllee

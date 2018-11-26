@@ -17,4 +17,10 @@ def lettre(gardien,aliment):
 def autre(gardien,aliment):
     return( gardien[0]==aliment[0])
        
-   
+def nom_x(nom) :
+    n=0
+    for i in range (len(nom)):
+        if nom[i]=='x':
+            n=n+1
+    if n!=0 :
+        print(nom)
