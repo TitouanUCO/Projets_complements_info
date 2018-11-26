@@ -30,11 +30,18 @@ def lettre_aliment (gardien,aliment):
         n=n+1
     return(n)
 
-'''Lettre_aliment_gardien2={r!=0 for gardien in BaseGardiens for alien in BaseAliens for miam in BaseMiams for cabine in BaseCabines if( gardien.NoCabine==alien.NoCabine and alien.Nom==miam.NomAlien  (r=lettre_aliment(gardien.Nom,miam.Aliment)) )}'''
+'''Lettre_aliment_gardien2={r!=0 for gardien in BaseGardiens for alien in BaseAliens for miam in BaseMiams for cabine in BaseCabines if (gardien.NoCabine==alien.NoCabine and alien.Nom==miam.NomAlien ):  r=lettre_aliment(gardien.Nom,miam.Aliment) }'''
 
-alien_euterpe={print('oui') for alien in BaseAliens if alien.Planete=='Euterpe' }
+alien_euterpe={ alien.Nom for alien in BaseAliens if alien.Planete=='Euterpe'  }
 
+def question_11(ensemble) :
+    if len(ensemble)>0 :
+        print('oui')
+    else :
+         print("non")
 
+'''alien_x={alien.Nom for alien in BaseAliens if (for i in range(len(alien.Nom))  alien.Nom[i]=='x')}'''
 
-
-question_14={print('oui') for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien and alien.Sexe=='M' and alien.Planete=='Trantor' and(miam.Aliment=='Bortsch' or (gardien.Nom==agent.Nom and agent.Ville=='Terminus')  }
+alien_x={nom_x(alien.Nom) for alien in BaseAliens}
+question_13={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines if alien.NoCabine==gardien.NoCabine and gardien.Nom==agent.Nom and agent.Ville=='Terminus' and alien.NoCabine==alien_x}
+question_14={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien and alien.Sexe=='M' and alien.Planete=='Trantor' and ( miam.Aliment=='Bortsch' or (gardien.Nom==agent.Nom and agent.Ville=='Terminus') ) } #bouger les parentheses en fonction de l'interpretation de la question
