@@ -23,7 +23,7 @@ def nom_x(nom) :
         if nom[i]=='x':
             n=n+1
     if n!=0 :
-        print(nom)
+        return(nom)
         
 def question_11(ensemble) :
     if len(ensemble)>0 :
