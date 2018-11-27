@@ -34,14 +34,38 @@ def lettre_aliment (gardien,aliment):
 
 alien_euterpe={ alien.Nom for alien in BaseAliens if alien.Planete=='Euterpe'  }
 
-def question_11(ensemble) :
-    if len(ensemble)>0 :
-        print('oui')
-    else :
-         print("non")
+# question 11 : existe t'il alien d'eurterpe
+n=0
+for alien in BaseAliens :
+        if alien.Planete =='Euterpe':
+            n=n+1
+if n!=0:
+    print("Il esxiste des aliens venant d'euterpe")
+                
+def alien_euterpe() :
+    n=0
+    for alien in BaseAliens :
+            if alien.Planete =='Euterpe':
+                n=n+1
+    if n!=0:                                            
+    return("Il existe des aliens venant d'euterpe")                                
 
-'''alien_x={alien.Nom for alien in BaseAliens if (for i in range(len(alien.Nom))  alien.Nom[i]=='x')}'''
 
-alien_x={nom_x(alien.Nom) for alien in BaseAliens}
-question_13={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines if alien.NoCabine==gardien.NoCabine and gardien.Nom==agent.Nom and agent.Ville=='Terminus' and alien.NoCabine==alien_x}
+'''alien_x={nom_x(alien.Nom) for alien in BaseAliens}'''
+question_13={agent_Terminus.issubset(alien_x) for alien in BaseAliens }
 question_14={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien and alien.Sexe=='M' and alien.Planete=='Trantor' and ( miam.Aliment=='Bortsch' or (gardien.Nom==agent.Nom and agent.Ville=='Terminus') ) } #bouger les parentheses en fonction de l'interpretation de la question
+
+
+'''alien_x={alien. for alien in BaseAliens}'''
+
+'''for alien in BaseAliens :
+    if alien.Planete =='Euterpe':
+        print('oui')'''
+# question 11 : existe t'il alien d'eurterpe
+n=0
+for alien in BaseAliens :
+        if alien.Planete =='Euterpe':
+            n=n+1
+if n!=0:
+    print("Il esxiste des aliens venant d'euterpe")
+                

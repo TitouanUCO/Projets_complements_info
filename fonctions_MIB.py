@@ -24,3 +24,15 @@ def nom_x(nom) :
             n=n+1
     if n!=0 :
         print(nom)
+        
+def question_11(ensemble) :
+    if len(ensemble)>0 :
+        print('oui')
+    else :
+         print("non")
+
+def lettre_aliment (gardien,aliment):
+    n=0
+    if gardien[0]==aliment[0]:
+        n=n+1
+    return(n)
