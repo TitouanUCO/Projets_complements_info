@@ -51,10 +51,12 @@ def alien_euterpe() :
 alien_x={nom_x(alien.Nom) for alien in BaseAliens}   #ensemble des aliens ayant un x dans leur nom
 def existence_alien_x() :
     alien_x={nom_x(alien.Nom) for alien in BaseAliens}
-    if(len(alien_x)!=9):
+    noms={alien.Nom for alien in BaseAliens}
+    if(len(alien_x)!=len(noms)):
         return("tous les aliens n'ont pas de x dans leurs noms")
     else: 
         return("tous les aliens ont un x dans leurs noms")
+    
     
 
 question_13={agent_Terminus.issubset(alien_x) for alien in BaseAliens }  
