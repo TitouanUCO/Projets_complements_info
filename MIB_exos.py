@@ -51,7 +51,7 @@ question_12={len(alien_x)==len(nom_alien)}
 question_13={gardien_Terminus.issubset(alien_x) for alien in BaseAliens }  
 
 #question 14 :
-condition={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien and alien.Sexe=='M' and alien.Planete=='Trantor' and ( miam.Aliment=='Bortsch' or (gardien.Nom==agent.Nom and agent.Ville=='Terminus') ) } #bouger les parentheses en fonction de l'interpretation de la question
+condition={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien  and  alien.Sexe=='M' and alien.Planete=='Trantor' and ( miam.Aliment=='Bortsch' or (alien.NoCabine==gardien.NoCabine and gardien.Nom==agent.Nom and agent.Ville=='Terminus') ) } #bouger les parentheses en fonction de l'interpretation de la question
 question14={len(condition)!=0}    
 
 
