@@ -36,3 +36,9 @@ def lettre_aliment (gardien,aliment):
     if gardien[0]==aliment[0]:
         n=n+1
     return(n)
+
+for alien in BaseAliens  :  
+    r={}
+    for i in range (len(alien.Nom)):
+        if alien.Nom[i]=='x':
+            r.add(alien.Nom)

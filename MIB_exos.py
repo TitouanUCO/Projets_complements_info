@@ -36,15 +36,10 @@ def lettre_aliment ():
         return('non')
 
 # question 11 : existe t'il alien d'eurterpe
-
+euterpe={alien.Nom for alien in BaseAliens if alien.Planete=='Euterpe'}
 def alien_euterpe() :
-    n=0
-    for alien in BaseAliens :
-            if alien.Planete =='Euterpe':
-                n=n+1
-    if n!=0 :
-        print("il existe des aliens venant d'Euterpe")
-                                          
+    return(len(euterpe)!=0)
+   
                            
 
 #question 12 :
@@ -61,7 +56,9 @@ def existence_alien_x() :
 
 question_13={agent_Terminus.issubset(alien_x) for alien in BaseAliens }  
 question_14={alien.Nom for alien in BaseAliens for gardien in BaseGardiens for agent in BaseAgents for cabine in BaseCabines for miam in BaseMiams if alien.Nom==miam.NomAlien and alien.Sexe=='M' and alien.Planete=='Trantor' and ( miam.Aliment=='Bortsch' or (gardien.Nom==agent.Nom and agent.Ville=='Terminus') ) } #bouger les parentheses en fonction de l'interpretation de la question
-
+def reponse_question_14():
+    return(len(question_14)!=0)
+    
 
 
 
